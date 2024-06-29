@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제품 페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+        }
+
+        header h1 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        header h1 a {
+            text-decoration: none; /* 링크 밑줄 제거 */
+            color: #333; /* 기본 텍스트 색상 */
+            font-size: 24px; /* 폰트 크기 조정 */
+            font-family: 'Great Vibes', sans-serif;
+        }
+
+        header img {
+            height: 50px;
+            margin-right: 0px;
+            
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav ul li a.active {
+            font-weight: bold;
+        }
+
+        .header-icons {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .icon-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .icon-button img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .icon-button a {
+            text-decoration: none;
+            color: #333;
+            padding: 15px;
+        }
+
+        .icon-button a:hover {
+            text-decoration: none;
+        }
+
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .category-tabs button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .category-tabs button.active {
+            background-color: #FF6347;
+        }
+
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+
+        .products article {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+            width: 15%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .products img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .more-button {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .more-button button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .more-button button:hover {
+            background-color: #FF6347;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.538);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        footer .footer-links {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer .footer-links ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        footer .footer-links li {
+            margin: 5px 0;
+            list-style-type: none;
+        }
+
+        footer .footer-links a {
+            color: white;
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        footer .footer-links a:hover {
+            text-decoration: none;
+        }
+
+        footer .social-icons {
+            margin: 10px 0;
+        }
+
+        footer .social-icons img {
+            width: 24px;
+            height: 24px;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+
+        footer .copyright {
+            margin-top: 10px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>
+                <a href="testing.html">
+                <img src="로고.png" alt="로고" style="height: 50px;">
+                MONOPOLY COFFEE JOURNEY
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="products.html" class="active">제품</a></li>
+                    <li><a href="sample-request.html">샘플 신청</a></li>
+                    <li><a href="#">고객 지원</a></li>
+                    <li><a href="#">사이트 소개</a></li>
+                </ul>
+                <div class="header-icons">
+                    <button class="icon-button"><img src="검색.png" alt="검색"></button>
+                    <a href="cart.html" class="icon-button"><img src="장바구니.png" alt="장바구니"></a>
+                    <a href="login.html" class="icon-button"><img src="로그인.png" alt="로그인"></a>
+                
+            </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="category-tabs">
+            <button class="active">나라별 원두</button>
+            <button class="window.location.href='products.html'">산미별 원두</button>
+            <button onclick="window.location.href='products.html'">디카페인</button>
+        </div>
+        <div class="products">
+            <article>
+                <img src="원두.jpg" alt="인도네시아 자바">
+                <h3>인도네시아 자바</h3>
+                <p>부드럽고 깊은 맛</p>
+            </article>
+            <article>
+                <img src="원두.jpg" alt="콜롬비아 수프리모">
+                <h3>콜롬비아 수프리모</h3>
+                <p>풍부하고 진한 향</p>
+            </article>
+            <article>
+                <img src="원두.jpg" alt="에티오피아 예가체프">
+                <h3>에티오피아 예가체프</h3>
+                <p>화려한 꽃향기</p>
+            </article>
+            <article>
+                <img src="원두.jpg" alt="이탈리아 더블스타">
+                <h3>이탈리아 더블스타</h3>
+                <p>진한 에스프레소</p>
+            </article>
+            <article>
+                <img src="원두.jpg" alt="브라질 산토스">
+                <h3>브라질 산토스</h3>
+                <p>달콤하고 부드러운 맛</p>
+            </article>
+            <article>
+                <img src="원두.jpg" alt="하와이안 코나">
+                <h3>하와이안 코나</h3>
+                <p>깔끔하고 상쾌한 맛</p>
+            </article>
+            <article>
+                <img src="원두.jpg" alt="과테말라 안티구아">
+                <h3>과테말라 안티구아</h3>
+                <p>고소하고 쌉싸름한 맛</p>
+            </article>
+            <article>
+                <img src="원두.jpg" alt="케냐 키암부">
+                <h3>케냐 키암부</h3>
+                <p>강하고 진한 맛</p>
+            </article>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="about.html">회사 소개</a></li>
+                    <li><a href="contact.html">연락처</a></li>
+                    <li><a href="privacy.html">개인정보 처리방침</a></li>
+                    <li><a href="terms.html">이용 약관</a></li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="페북.png" alt="Facebook"></a>
+                <a href="#"><img src="트위터.png" alt="Twitter"></a>
+                <a href="#"><img src="인스타.png" alt="Instagram"></a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 MONOPOLY COFFEE JOURNEY. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sourButton = document.getElementById('sour-button');
+            const decafButton = document.getElementById('decaf-button');
+            const productsContainer = document.getElementById('products');
+
+            sourButton.addEventListener('click', function() {
+                sourButton.classList.add('active');
+                decafButton.classList.remove('active');
+                // 산미별 원두 제품 로딩 로직을 여기에 추가
+                productsContainer.innerHTML = `
+                    <article>
+                        <img src="sour-bean1.jpg" alt="산미별 원두 1">
+                        <h3>산미별 원두 1</h3>
+                        <p>설명 1</p>
+                    </article>
+                    <article>
+                        <img src="sour-bean2.jpg" alt="산미별 원두 2">
+                        <h3>산미별 원두 2</h3>
+                        <p>설명 2</p>
+                    </article>
+                `;
+            });
+
+            decafButton.addEventListener('click', function() {
+                decafButton.classList.add('active');
+                sourButton.classList.remove('active');
+                // 디카페인 제품 로딩 로직을 여기에 추가
+                productsContainer.innerHTML = `
+                    <article>
+                        <img src="decaf-bean1.jpg" alt="디카페인 1">
+                        <h3>디카페인 1</h3>
+                        <p>설명 1</p>
+                    </article>
+                    <article>
+                        <img src="decaf-bean2.jpg" alt="디카페인 2">
+                        <h3>디카페인 2</h3>
+                        <p>설명 2</p>
+                    </article>
+                `;
+            });
+
+            // 초기 상태로 '산미별 원두' 버튼 활성화
+            sourButton.classList.add('active');
+            productsContainer.innerHTML = `
+                <article>
+                    <img src="sour-bean1.jpg" alt="산미별 원두 1">
+                    <h3>산미별 원두 1</h3>
+                    <p>설명 1</p>
+                </article>
+                <article>
+                    <img src="sour-bean2.jpg" alt="산미별 원두 2">
+                    <h3>산미별 원두 2</h3>
+                    <p>설명 2</p>
+                </article>
+            `;
+        });
+    </script>
+</body>
+</html>

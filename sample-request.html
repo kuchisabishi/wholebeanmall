@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>샘플 신청</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+        }
+
+        header h1 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        header h1 a {
+            text-decoration: none; /* 링크 밑줄 제거 */
+            color: #333; /* 기본 텍스트 색상 */
+            font-size: 24px; /* 폰트 크기 조정 */
+            font-family: 'Great Vibes', sans-serif;
+        }
+
+
+        header img {
+            height: 50px;
+            margin-right: 0px;
+           
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav ul li a.active {
+            font-weight: bold;
+        }
+
+        .header-icons {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .icon-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .icon-button img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .icon-button a {
+            text-decoration: none;
+            color: #333;
+            padding: 15px;
+        }
+
+        .icon-button a:hover {
+            text-decoration: none;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .form-section {
+            margin-bottom: 20px;
+        }
+
+        .form-section h2 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .form-section p {
+            margin-bottom: 5px;
+            font-size: 15px;
+            color: #555;
+        }
+
+        .form-section input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .form-section label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .submit-button {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .submit-button button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .submit-button button:hover {
+            background-color: #FF6347;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.538);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        footer .footer-links {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer .footer-links ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        footer .footer-links li {
+            margin: 5px 0;
+            list-style-type: none;
+        }
+
+        footer .footer-links a {
+            color: white;
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        footer .footer-links a:hover {
+            text-decoration: none;
+        }
+
+        footer .social-icons {
+            margin: 10px 0;
+        }
+
+        footer .social-icons img {
+            width: 24px;
+            height: 24px;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+
+        footer .copyright {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>
+                <a href="testing.html">
+                <img src="로고.png" alt="로고">
+                MONOPOLY COFFEE JOURNEY
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="products.html">제품</a></li>
+                    <li><a href="sample-request.html" class="active">샘플 신청</a></li>
+                    <li><a href="#">고객 지원</a></li>
+                    <li><a href="#">사이트 소개</a></li>
+                </ul>
+                <div class="header-icons">
+                        <button class="icon-button"><img src="검색.png" alt="검색"></button>
+                        <a href="cart.html" class="icon-button"><img src="장바구니.png" alt="장바구니"></a>
+                        <a href="login.html" class="icon-button"><img src="로그인.png" alt="로그인"></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <div class="form-section">
+                <h2>*원두 향미 사전 조사</h2>
+                <p><input type="radio" name="flavor" value="고소한 견과류"> 고소한 견과류</p>
+                <p><input type="radio" name="flavor" value="화려한 꽃향"> 화려한 꽃향</p>
+                <p><input type="radio" name="flavor" value="상큼한 과일향"> 상큼한 과일향</p>
+                <p><input type="radio" name="flavor" value="은은한 허브향"> 은은한 허브향</p>
+                <p><input type="radio" name="flavor" value="달콤 쌉싸름한 다크초콜릿"> 달콤 쌉싸름한 다크초콜릿</p>
+            </div>
+
+            <div class="form-section">
+                <h2>*원두 바디감 사전 조사</h2>
+                <label><input type="radio" name="body" value="1"> 1 (가벼움)</label>
+                <label><input type="radio" name="body" value="2"> 2</label>
+                <label><input type="radio" name="body" value="3"> 3</label>
+                <label><input type="radio" name="body" value="4"> 4</label>
+                <label><input type="radio" name="body" value="5"> 5 (묵직함)</label>
+            </div>
+
+            <div class="form-section">
+                <h2>*원두 산미 사전 조사</h2>
+                <label><input type="radio" name="acidity" value="1"> 1 (약함)</label>
+                <label><input type="radio" name="acidity" value="2"> 2</label>
+                <label><input type="radio" name="acidity" value="3"> 3</label>
+                <label><input type="radio" name="acidity" value="4"> 4</label>
+                <label><input type="radio" name="acidity" value="5"> 5 (강함)</label>
+            </div>
+
+            <div class="form-section">
+                <h2>*모노폴리를 알게된 경로</h2>
+                <p><input type="radio" name="source" value="블로그"> 블로그</p>
+                <p><input type="radio" name="source" value="네이버"> 네이버</p>
+                <p><input type="radio" name="source" value="구글"> 구글</p>
+                <p><input type="radio" name="source" value="인스타그램"> 인스타그램</p>
+                <p><input type="radio" name="source" value="기타"> 기타</p>
+            </div>
+
+            <div class="submit-button">
+                <button>신청하기</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="about.html">회사 소개</a></li>
+                    <li><a href="contact.html">연락처</a></li>
+                    <li><a href="privacy.html">개인정보 처리방침</a></li>
+                    <li><a href="terms.html">이용 약관</a></li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="페북.png" alt="Facebook"></a>
+                <a href="#"><img src="트위터.png" alt="Twitter"></a>
+                <a href="#"><img src="인스타.png" alt="Instagram"></a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 MONOPOLY COFFEE JOURNEY. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

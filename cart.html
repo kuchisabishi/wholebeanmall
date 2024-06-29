@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center; 
+        }
+        
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .cart-container {
+    width: 100%; /* 부모 컨테이너의 너비를 초과하지 않도록 설정 */
+    padding: 20px;
+    box-sizing: border-box; /* padding을 포함한 전체 너비 계산 */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+        .cart h3 {
+            margin-top: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+    
+
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: auto;
+        }
+
+        .cart-item-info {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .cart-item-info h3 {
+            margin: 0;
+        }
+
+        .cart-item-info p {
+            margin: 5px 0;
+        }
+
+        .cart-total {
+            font-size: 18px;
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .cart-total span {
+            font-weight: bold;
+        }
+       
+        .checkout-button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        .checkout-button:hover {
+            background-color: #555;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.538);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        footer .footer-links {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer .footer-links ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        footer .footer-links li {
+            margin: 5px 0;
+            list-style-type: none;
+        }
+
+        footer .footer-links a {
+            color: white;
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        footer .footer-links a:hover {
+            text-decoration: none;
+        }
+
+        footer .social-icons {
+            margin: 10px 0;
+        }
+
+        footer .social-icons img {
+            width: 24px;
+            height: 24px;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+
+        footer .copyright {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>장바구니</h1>
+            <nav>
+                <ul>
+                    <li><a href="testing.html">홈</a></li>
+                    <li><a href="products.html">제품</a></li>
+                    <li><a href="sample-request.html">샘플 신청</a></li>
+                    <li><a href="#">고객 지원</a></li>
+                    <li><a href="#">사이트 소개</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="cart">
+            <h3>장바구니에 담긴 제품</h3>
+            <div class="cart-item">
+                <img src="원두.jpg" alt="인도네시아 자바">
+                <div class="cart-item-info">
+                    <h3>인도네시아 자바</h3>
+                    <p>수량: 1</p>
+                    <p>가격: 12,000원</p>
+                </div>
+                <div class="cart-item-price">
+                    <p>12,000원</p>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <img src="원두.jpg" alt="콜롬비아 수프리모">
+                <div class="cart-item-info">
+                    <h3>콜롬비아 수프리모</h3>
+                    <p>수량: 1</p>
+                    <p>가격: 15,000원</p>
+                </div>
+                <div class="cart-item-price">
+                    <p>15,000원</p>
+                </div>
+            </div>
+
+            <div class="cart-total">
+                <p>총 합계: <span>27,000원</span></p>
+            </div>
+            <a href="checkout.html" class="checkout-button">결제하기</a>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="about.html">회사 소개</a></li>
+                    <li><a href="contact.html">연락처</a></li>
+                    <li><a href="privacy.html">개인정보 처리방침</a></li>
+                    <li><a href="terms.html">이용 약관</a></li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="페북.png" alt="Facebook"></a>
+                <a href="#"><img src="트위터.png" alt="Twitter"></a>
+                <a href="#"><img src="인스타.png" alt="Instagram"></a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 MONOPOLY COFFEE JOURNEY. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

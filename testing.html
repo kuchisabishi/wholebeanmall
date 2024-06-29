@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원두 판매 사이트</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+        }
+
+        header h1 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        header h1 a {
+            text-decoration: none; /* 링크 밑줄 제거 */
+            color: #333; /* 기본 텍스트 색상 */
+            font-size: 24px; /* 폰트 크기 조정 */
+            font-family: 'Great Vibes', sans-serif;
+        }
+
+        header img {
+            height: 50px;
+            margin-right: 0px;
+    
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            margin-right: 30px;
+        }
+
+        nav ul li a {
+            color: #3a3939;
+            text-decoration: none; 
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: none; 
+        }
+
+        .main-banner {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .main-banner {.main-banner {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .banner-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .banner-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .banner-slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        .banner-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .control-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .control-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 600px;
+            margin-top: 20px;
+        }
+
+        .main-banner img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .main-banner .banner-text {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px 40px;
+            border-radius: 10px;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+
+        .main-banner .banner-text button {
+            background-color: #FF6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .main-banner .banner-text button:hover {
+            background-color: #FF4500;
+        }
+       
+
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            background-color: none;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .category-tabs button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .category-tabs button.active {
+            background-color: #FF6347;
+        }
+
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+
+        .products article {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+            width: 15%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .products img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .more-button {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .more-button a {
+            background-color: #333;
+            color: white;
+            text-decoration: none; /* 링크 밑줄 제거 */
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 15px;
+        }
+
+        .more-button a:hover {
+            background-color: #FF6347;
+        }
+
+        .header-icons {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .icon-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .icon-button img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .icon-button a {
+            text-decoration: none; /* 링크 밑줄 제거 */
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.538);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            
+        }
+
+        footer .footer-links {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer .footer-links ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        footer .footer-links li {
+            margin: 5px 0;
+            list-style-type: none;
+            
+        }
+
+        footer .footer-links a {
+            color: white;
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        footer .footer-links a:hover {
+            text-decoration: none;
+        }
+
+        footer .social-icons {
+            margin: 10px 0;
+        }
+
+        footer .social-icons img {
+            width: 24px;
+            height: 24px;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+
+        footer .copyright {
+            margin-top: 10px;
+        }
+
+
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 0 10px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+                padding: 0 5px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>
+                <a href="testing.html">
+                    <img src="로고.png" alt="로고">
+                    MONOPOLY COFFEE JOURNEY
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="products.html">제품</a></li>
+                    <li><a href="sample-request.html">샘플 신청</a></li>
+                    <li><a href="#">고객 지원</a></li>
+                    <li><a href="#">사이트 소개</a></li>
+                </ul>
+                <div class="header-icons">
+                    <button class="icon-button"><img src="검색.png" alt="검색"></button>
+                    <a href="cart.html" class="icon-button"><img src="장바구니.png" alt="장바구니"></a>
+                    <a href="login.html" class="icon-button"><img src="로그인.png" alt="로그인"></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-banner">
+            <img class="banner-slide" src="배너2.jpg" alt="배너 이미지 1">
+
+        <div class="banner-text">
+            <p>초보자를 위한 바리스타 원두<br>고품질의 커피를 편하게 경험할 수 있습니다</p>
+            <button onclick="window.location.href='sample-request.html'">샘플 신청하기</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="category-tabs">
+            <button class="active">베스트</button>
+            <button>이번 주 인기제품</button>
+        </div>
+        <div class="products">
+            <article>
+                <img src="원두.jpg" alt="인도네시아 자바">
+                <h3>인도네시아 자바</h3>
+                <p>부드럽고 깊은 맛</p>
+            </article>
+            <article>
+                <img src="원두.jpg" alt="콜롬비아 수프리모">
+                <h3>콜롬비아 수프리모</h3>
+                <p>풍부하고 진한 향</p>
+            </article>
+            <article>
+                <img src="원두.jpg" alt="에티오피아 예가체프">
+                <h3>에티오피아 예가체프</h3>
+                <p>화려한 꽃향기</p>
+            </article>
+            <article>
+                <img src="원두.jpg" alt="이탈리아 더블스타">
+                <h3>이탈리아 더블스타</h3>
+                <p>진한 에스프레소</p>
+            </article>
+        </div>
+        <div class="more-button">
+            <a href="products.html">더보기</a>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="about.html">회사 소개</a></li>
+                    <li><a href="contact.html">연락처</a></li>
+                    <li><a href="privacy.html">개인정보 처리방침</a></li>
+                    <li><a href="terms.html">이용 약관</a></li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="페북.png" alt="Facebook"></a>
+                <a href="#"><img src="트위터.png" alt="Twitter"></a>
+                <a href="#"><img src="인스타.png" alt="Instagram"></a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 MONOPOLY COFFEE JOURNEY. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
